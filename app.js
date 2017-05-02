@@ -65,11 +65,10 @@
 		service.toBuy = function () {
 			service.toBuyList = service.initialList;
 			return service.toBuyList;
-
 		};
 
 		service.remove = function (itemIndex) {
-			service.bought = service.toBuyList.splice(itemIndex, 1);
+			service.bought.push(service.toBuyList.splice(itemIndex, 1));
 			console.log(service.bought);	
 			return service.bought;	
 		};
