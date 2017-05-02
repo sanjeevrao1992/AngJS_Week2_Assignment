@@ -68,7 +68,8 @@
 		};
 
 		service.remove = function (itemIndex) {
-			service.bought.push(service.toBuyList.splice(itemIndex, 1));
+			var x = service.toBuyList.splice(itemIndex, 1)[0];
+			service.bought.push(x);
 			console.log(service.bought);	
 			return service.bought;	
 		};
